@@ -1,0 +1,86 @@
+[debug] [2024-10-21T08:45:40.162Z] ----------------------------------------------------------------------
+[debug] [2024-10-21T08:45:40.164Z] Command:       /usr/local/bin/firebase /Users/akkiaryan/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2024-10-21T08:45:40.164Z] CLI Version:   13.16.0
+[debug] [2024-10-21T08:45:40.164Z] Platform:      darwin
+[debug] [2024-10-21T08:45:40.164Z] Node Version:  v18.5.0
+[debug] [2024-10-21T08:45:40.166Z] Time:          Mon Oct 21 2024 14:15:40 GMT+0530 (India Standard Time)
+[debug] [2024-10-21T08:45:40.166Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-21T08:45:40.314Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-21T08:45:40.315Z] > authorizing via signed-in user (akkiaryan777@gmail.com)
+[debug] [2024-10-21T08:45:40.316Z] [iam] checking project dbms-digital-assignment for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2024-10-21T08:45:40.318Z] > refreshing access token with scopes: []
+[debug] [2024-10-21T08:45:40.321Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-10-21T08:45:40.322Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-21T08:45:40.925Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-10-21T08:45:40.929Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-21T08:45:40.940Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dbms-digital-assignment:testIamPermissions [none]
+[debug] [2024-10-21T08:45:40.943Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dbms-digital-assignment:testIamPermissions x-goog-quota-user=projects/dbms-digital-assignment
+[debug] [2024-10-21T08:45:40.943Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dbms-digital-assignment:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2024-10-21T08:45:42.839Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dbms-digital-assignment:testIamPermissions 200
+[debug] [2024-10-21T08:45:42.843Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dbms-digital-assignment:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2024-10-21T08:45:42.846Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dbms-digital-assignment [none]
+[debug] [2024-10-21T08:45:43.747Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dbms-digital-assignment 200
+[debug] [2024-10-21T08:45:43.747Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dbms-digital-assignment {"projectId":"dbms-digital-assignment","projectNumber":"412617550084","displayName":"DBMS DIGITAL ASSIGNMENT","name":"projects/dbms-digital-assignment","resources":{"hostingSite":"dbms-digital-assignment","realtimeDatabaseInstance":"dbms-digital-assignment-default-rtdb"},"state":"DELETED","etag":"1_9c0f1a0e-b8f8-4723-b668-838905765661"}
+[debug] [2024-10-21T08:45:43.749Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dbms-digital-assignment [none]
+[debug] [2024-10-21T08:45:44.488Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dbms-digital-assignment 200
+[debug] [2024-10-21T08:45:44.489Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dbms-digital-assignment {"projectId":"dbms-digital-assignment","projectNumber":"412617550084","displayName":"DBMS DIGITAL ASSIGNMENT","name":"projects/dbms-digital-assignment","resources":{"hostingSite":"dbms-digital-assignment","realtimeDatabaseInstance":"dbms-digital-assignment-default-rtdb"},"state":"DELETED","etag":"1_9c0f1a0e-b8f8-4723-b668-838905765661"}
+[info] 
+[info] === Deploying to 'dbms-digital-assignment'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2024-10-21T08:45:44.500Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/dbms-digital-assignment/locations/-/instances/dbms-digital-assignment-default-rtdb [none]
+[debug] [2024-10-21T08:45:46.508Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/dbms-digital-assignment/locations/-/instances/dbms-digital-assignment-default-rtdb 200
+[debug] [2024-10-21T08:45:46.509Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/dbms-digital-assignment/locations/-/instances/dbms-digital-assignment-default-rtdb {"name":"projects/412617550084/locations/asia-southeast1/instances/dbms-digital-assignment-default-rtdb","project":"projects/412617550084","databaseUrl":"https://dbms-digital-assignment-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2024-10-21T08:45:46.512Z] >>> [apiv2][query] PUT https://dbms-digital-assignment-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json dryRun=true
+[debug] [2024-10-21T08:45:46.513Z] >>> [apiv2][body] PUT https://dbms-digital-assignment-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2024-10-21T08:45:47.329Z] <<< [apiv2][status] PUT https://dbms-digital-assignment-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 401
+[debug] [2024-10-21T08:45:47.331Z] <<< [apiv2][body] PUT https://dbms-digital-assignment-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json {"error":"Unauthorized request."}
+[error] 
+[error] Error: Unexpected error while deploying database rules.
+[debug] [2024-10-21T20:14:17.665Z] ----------------------------------------------------------------------
+[debug] [2024-10-21T20:14:17.668Z] Command:       /usr/local/bin/firebase /Users/akkiaryan/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2024-10-21T20:14:17.668Z] CLI Version:   13.16.0
+[debug] [2024-10-21T20:14:17.669Z] Platform:      darwin
+[debug] [2024-10-21T20:14:17.669Z] Node Version:  v18.5.0
+[debug] [2024-10-21T20:14:17.676Z] Time:          Tue Oct 22 2024 01:44:17 GMT+0530 (India Standard Time)
+[debug] [2024-10-21T20:14:17.676Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-21T20:14:17.691Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-10-21T20:14:17.924Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-21T20:14:17.926Z] > authorizing via signed-in user (akkiaryan777@gmail.com)
+[debug] [2024-10-21T20:14:17.926Z] [iam] checking project dbms-digital-assignment for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2024-10-21T20:14:17.928Z] > refreshing access token with scopes: []
+[debug] [2024-10-21T20:14:17.930Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-10-21T20:14:17.931Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-21T20:14:18.455Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-10-21T20:14:18.457Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-21T20:14:18.471Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dbms-digital-assignment:testIamPermissions [none]
+[debug] [2024-10-21T20:14:18.474Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dbms-digital-assignment:testIamPermissions x-goog-quota-user=projects/dbms-digital-assignment
+[debug] [2024-10-21T20:14:18.476Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dbms-digital-assignment:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2024-10-21T20:14:19.041Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-10-21T20:14:19.044Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-10-21T20:14:20.138Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dbms-digital-assignment:testIamPermissions 200
+[debug] [2024-10-21T20:14:20.138Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dbms-digital-assignment:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2024-10-21T20:14:20.140Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dbms-digital-assignment [none]
+[debug] [2024-10-21T20:14:21.145Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dbms-digital-assignment 200
+[debug] [2024-10-21T20:14:21.145Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dbms-digital-assignment {"projectId":"dbms-digital-assignment","projectNumber":"412617550084","displayName":"DBMS DIGITAL ASSIGNMENT","name":"projects/dbms-digital-assignment","resources":{"hostingSite":"dbms-digital-assignment","realtimeDatabaseInstance":"dbms-digital-assignment-default-rtdb"},"state":"DELETED","etag":"1_9c0f1a0e-b8f8-4723-b668-838905765661"}
+[debug] [2024-10-21T20:14:21.147Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dbms-digital-assignment [none]
+[debug] [2024-10-21T20:14:22.028Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dbms-digital-assignment 200
+[debug] [2024-10-21T20:14:22.029Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dbms-digital-assignment {"projectId":"dbms-digital-assignment","projectNumber":"412617550084","displayName":"DBMS DIGITAL ASSIGNMENT","name":"projects/dbms-digital-assignment","resources":{"hostingSite":"dbms-digital-assignment","realtimeDatabaseInstance":"dbms-digital-assignment-default-rtdb"},"state":"DELETED","etag":"1_9c0f1a0e-b8f8-4723-b668-838905765661"}
+[info] 
+[info] === Deploying to 'dbms-digital-assignment'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2024-10-21T20:14:22.038Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/dbms-digital-assignment/locations/-/instances/dbms-digital-assignment-default-rtdb [none]
+[debug] [2024-10-21T20:14:24.076Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/dbms-digital-assignment/locations/-/instances/dbms-digital-assignment-default-rtdb 404
+[debug] [2024-10-21T20:14:24.077Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/dbms-digital-assignment/locations/-/instances/dbms-digital-assignment-default-rtdb {"error":{"code":404,"message":"Project has been deleted.","status":"NOT_FOUND"}}
+[debug] [2024-10-21T20:14:24.080Z] HTTP Error: 404, Project has been deleted.
+[debug] [2024-10-21T20:14:24.477Z] FirebaseError: HTTP Error: 404, Project has been deleted.
+    at responseToError (/Users/akkiaryan/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/Users/akkiaryan/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/apiv2.js:305:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get instance details for instance: dbms-digital-assignment-default-rtdb. See firebase-debug.log for more details.
